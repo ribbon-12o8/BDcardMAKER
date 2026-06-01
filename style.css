@@ -26,11 +26,22 @@ textarea{
   padding:30px;
   border-radius:12px;
   box-shadow:0 0 10px rgba(0,0,0,0.1);
-  min-height:250px;
+
+  width:800px;
+  height:450px;
+
+  box-sizing:border-box;
+
+  display:flex;
+  flex-direction:column;
 }
 
 #preview-message{
   white-space: pre-wrap;
+  text-align:left;
+  line-height:1.8;
+
+  flex-grow:1;
 }
 
 button{
@@ -50,4 +61,8 @@ button{
   white-space: pre-wrap;
   text-align:left;
   line-height:1.8;
+}
+
+#preview-name{
+  text-align:right;
 }

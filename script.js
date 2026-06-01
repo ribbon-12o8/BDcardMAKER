@@ -64,3 +64,15 @@ fontSelect.addEventListener(
 );
 
 updatePreview();
+
+const submitBtn = document.getElementById("submitBtn");
+
+submitBtn.addEventListener("click", async () => {
+
+  const canvas = await html2canvas(previewCard);
+
+  const image = canvas.toDataURL("image/png");
+
+  console.log(image);
+
+});
