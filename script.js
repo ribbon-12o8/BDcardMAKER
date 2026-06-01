@@ -13,14 +13,39 @@ const previewCard =
 
 function updatePreview(){
 
+  const message = messageInput.value;
+  const length = message.length;
+
   previewMessage.textContent =
-    messageInput.value || "メッセージがここに表示されます";
+    message || "メッセージがここに表示されます";
 
   previewName.textContent =
     "by " + (nameInput.value || "Name");
 
   previewCard.style.fontFamily =
     fontSelect.value;
+
+  document.getElementById("char-count")
+    .textContent =
+    `${length} / 400文字`;
+
+  if(length <= 100){
+
+    previewMessage.style.fontSize = "28px";
+
+  }else if(length <= 200){
+
+    previewMessage.style.fontSize = "24px";
+
+  }else if(length <= 300){
+
+    previewMessage.style.fontSize = "20px";
+
+  }else{
+
+    previewMessage.style.fontSize = "18px";
+
+  }
 }
 
 nameInput.addEventListener(
@@ -37,3 +62,5 @@ fontSelect.addEventListener(
   "change",
   updatePreview
 );
+
+updatePreview();

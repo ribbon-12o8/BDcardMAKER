@@ -29,8 +29,25 @@ textarea{
   min-height:250px;
 }
 
+#preview-message{
+  white-space: pre-wrap;
+}
+
 button{
   margin-top:20px;
   padding:12px 20px;
   cursor:pointer;
+}
+
+#char-count{
+  text-align:right;
+  margin-top:-10px;
+  margin-bottom:20px;
+  color:#666;
+}
+
+#preview-message{
+  white-space: pre-wrap;
+  text-align:left;
+  line-height:1.8;
 }
