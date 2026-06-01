@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Card Maker</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Birthday Card Maker</h1>
+
+    <label>お名前</label>
+    <input type="text" id="name">
+
+    <label>カードデザイン</label>
+    <select id="design">
+      <option>STAGE PASS</option>
+      <option>IMMERSIVE</option>
+      <option>PARK TICKET</option>
+      <option>BACKSTAGE PASS</option>
+      <option>BIRTHDAY</option>
+    </select>
+
+    <label>フォント</label>
+    <select id="font">
+      <option value="sans-serif">ゴシック</option>
+      <option value="serif">明朝</option>
+      <option value="'Comic Sans MS', cursive">手書き風</option>
+      <option value="'Arial Rounded MT Bold', sans-serif">丸ゴシック</option>
+    </select>
+
+    <label>メッセージ</label>
+    <textarea id="message" maxlength="400"></textarea>
+
+    <h2>プレビュー</h2>
+
+    <div id="card-preview">
+      <h3>Happy Birthday!</h3>
+
+      <p id="preview-message">
+        メッセージがここに表示されます
+      </p>
+
+      <p id="preview-name">
+        by Name
+      </p>
+    </div>
+
+    <button id="submitBtn">
+      送信
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
