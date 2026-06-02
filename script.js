@@ -97,7 +97,7 @@ KL: "images/stamps/K-l.png",
 champagneL: "images/stamps/champagne-l.png",
 ringL: "images/stamps/ring-l.png",
 kagi: "images/stamps/kagi.png",
-DM: "images/stamps/DM.png",
+DM: "images/stamps/dm.png",
 hat: "images/stamps/hat.png"
 };
 
