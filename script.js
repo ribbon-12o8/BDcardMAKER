@@ -38,21 +38,29 @@ function updatePreview(){
     .textContent =
     `${length} / 400文字`;
 
-  if(length <= 100){
+  if(length <= 30){
 
     previewMessage.style.fontSize = "28px";
 
-  }else if(length <= 200){
+  }else if(length <= 60){
 
     previewMessage.style.fontSize = "24px";
 
-  }else if(length <= 300){
+  }else if(length <= 100){
+
+    previewMessage.style.fontSize = "22px";
+  
+  }else if(length <= 150){
 
     previewMessage.style.fontSize = "20px";
 
-  }else{
+  }else if(length <= 200){
 
     previewMessage.style.fontSize = "18px";
+
+  }else{
+
+    previewMessage.style.fontSize = "16px";
 
   }
 }

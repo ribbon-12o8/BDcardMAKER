@@ -34,14 +34,31 @@ textarea{
 
   display:flex;
   flex-direction:column;
+
+  position:relative;
 }
 
 #preview-message{
   white-space: pre-wrap;
-  text-align:left;
+  text-align:center;
   line-height:1.8;
 
-  flex-grow:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+#preview-message{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+  width:80%;
+  max-width:550px;
+
+  text-align:center;
 }
 
 button{
@@ -57,12 +74,14 @@ button{
   color:#666;
 }
 
-#preview-message{
-  white-space: pre-wrap;
-  text-align:left;
-  line-height:1.8;
+#card-preview h3{
+  text-align:center;
+  margin: 30px 0 0 0;
 }
 
 #preview-name{
-  text-align:right;
+  position:absolute;
+  bottom:50px;
+  left:50%;
+  transform:translateX(-50%);
 }
