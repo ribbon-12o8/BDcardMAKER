@@ -2,6 +2,9 @@ const nameInput = document.getElementById("name");
 const messageInput = document.getElementById("message");
 const fontSelect = document.getElementById("font");
 
+const designSelect =
+  document.getElementById("design");
+  
 const previewMessage =
   document.getElementById("preview-message");
 
@@ -24,6 +27,12 @@ function updatePreview(){
 
   previewCard.style.fontFamily =
     fontSelect.value;
+
+  previewCard.style.backgroundImage =
+  `url(images/backgrounds/${designSelect.value}.png)`;
+
+  previewCard.style.backgroundSize = "cover";
+  previewCard.style.backgroundPosition = "center";
 
   document.getElementById("char-count")
     .textContent =
@@ -53,6 +62,11 @@ nameInput.addEventListener(
   updatePreview
 );
 
+designSelect.addEventListener(
+  "change",
+  updatePreview
+);
+
 messageInput.addEventListener(
   "input",
   updatePreview
@@ -76,6 +90,8 @@ submitBtn.addEventListener("click", async () => {
     const canvas = await html2canvas(
       document.getElementById("card-preview")
     );
+
+    document.body.appendChild(canvas);
 
     const image = canvas.toDataURL("image/png");
 
