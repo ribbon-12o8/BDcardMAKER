@@ -23,7 +23,7 @@ function updatePreview(){
     message || "メッセージがここに表示されます";
 
   previewName.textContent =
-    "by " + (nameInput.value || "Name");
+    (nameInput.value || "Name");
 
   previewCard.style.fontFamily =
     fontSelect.value;
