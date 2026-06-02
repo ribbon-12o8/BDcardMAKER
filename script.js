@@ -65,8 +65,42 @@ fontSelect.addEventListener(
 
 updatePreview();
 
+const GAS_URL = "https://script.google.com/macros/s/AKfycbzI-cWtN9dfnl6nolNTbN_Em89ptADTPjiwHeHGfyXu4a8RNLZRZAOl2nQONvV_qqKh/exec";
+
 const submitBtn = document.getElementById("submitBtn");
 
-submitBtn.addEventListener("click", () => {
-  alert("ボタン押された！");
+submitBtn.addEventListener("click", async () => {
+
+  try {
+
+    const canvas = await html2canvas(
+      document.getElementById("card-preview")
+    );
+
+    const image = canvas.toDataURL("image/png");
+
+    const response = await fetch(GAS_URL, {
+      method: "POST",
+      body: JSON.stringify({
+        name: nameInput.value,
+        message: messageInput.value,
+        design: document.getElementById("design").value,
+        image: image
+      })
+    });
+
+    const result = await response.json();
+
+    if(result.success){
+      alert("送信完了！");
+    }else{
+      alert("エラー：" + result.error);
+    }
+
+  } catch(err){
+
+    console.error(err);
+    alert("送信失敗");
+  }
+
 });
