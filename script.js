@@ -63,7 +63,45 @@ function updatePreview(){
     previewMessage.style.fontSize = "16px";
 
   }
+
+setStamp("stamp-tl", "img-tl");
+setStamp("stamp-tr", "img-tr");
+setStamp("stamp-bl", "img-bl");
+setStamp("stamp-br", "img-br");
 }
+
+
+function setStamp(selectId, imgId){ 
+  const value = document.getElementById(selectId).value; 
+  const img = document.getElementById(imgId); 
+  if(value === "none"){ 
+    img.style.display = "none"; 
+  }
+  else{ img.style.display = "block"; 
+    img.src = stampMap[value]; 
+  } 
+  console.log(selectId, value, stampMap[value]);
+}
+
+
+const stampMap = {
+rose: "images/stamps/rose.png",
+beerR: "images/stamps/beer(r).png",
+HR: "images/stamps/H(r).png",
+KR: "images/stamps/K(r).png",
+champagneR: "images/stamps/champagne(r).png",
+ringR: "images/stamps/ring(r).png",
+beerL: "images/stamps/beer(l).png",
+HL: "images/stamps/H(l).png",
+KL: "images/stamps/K(l).png",
+champagneL: "images/stamps/champagne(l).png",
+ringL: "images/stamps/ring(l).png",
+kagi: "images/stamps/kagi.png",
+DM: "images/stamps/DM.png",
+hat: "images/stamps/hat.png"
+};
+
+
 
 nameInput.addEventListener(
   "input",
@@ -85,6 +123,18 @@ fontSelect.addEventListener(
   updatePreview
 );
 
+document.getElementById("stamp-tl")
+  .addEventListener("change", updatePreview);
+
+document.getElementById("stamp-tr")
+  .addEventListener("change", updatePreview);
+
+document.getElementById("stamp-bl")
+  .addEventListener("change", updatePreview);
+
+document.getElementById("stamp-br")
+  .addEventListener("change", updatePreview);
+
 updatePreview();
 
 const GAS_URL = "https://script.google.com/macros/s/AKfycbzI-cWtN9dfnl6nolNTbN_Em89ptADTPjiwHeHGfyXu4a8RNLZRZAOl2nQONvV_qqKh/exec";
@@ -98,8 +148,6 @@ submitBtn.addEventListener("click", async () => {
     const canvas = await html2canvas(
       document.getElementById("card-preview")
     );
-
-    document.body.appendChild(canvas);
 
     const image = canvas.toDataURL("image/png");
 
