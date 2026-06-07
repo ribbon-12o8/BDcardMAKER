@@ -111,7 +111,11 @@ bottleR: "images/stamps/bottle-r.png",
 HBtYL: "images/stamps/HBtY-l.png",
 HBtYR: "images/stamps/HBtY-r.png",
 crackerL: "images/stamps/cracker-l.png",
-crackerR: "images/stamps/cracker-r.png"
+crackerR: "images/stamps/cracker-r.png",
+CMPNL: "images/stamps/CMPN-l.png",
+CMPNR: "images/stamps/CMPN-r.png",
+CMPNTL: "images/stamps/CMPNT-l.png",
+CMPNTR: "images/stamps/CMPNT-r.png"
 };
 
 
