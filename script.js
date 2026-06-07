@@ -1,6 +1,7 @@
 const nameInput = document.getElementById("name");
 const messageInput = document.getElementById("message");
-const fontSelect = document.getElementById("font");
+const messageFontSelect = document.getElementById("message-font");
+const nameFontSelect = document.getElementById("name-font");
 
 const designSelect =
   document.getElementById("design");
@@ -25,8 +26,14 @@ function updatePreview(){
   previewName.textContent =
     (nameInput.value || "Name");
 
-  previewCard.style.fontFamily =
-    fontSelect.value;
+  //previewCard.style.fontFamily =
+   // fontSelect.value;
+
+    previewMessage.style.fontFamily =
+  messageFontSelect.value;
+
+previewName.style.fontFamily =
+  nameFontSelect.value;
 
   previewCard.style.backgroundImage =
   `url(images/backgrounds/${designSelect.value}.png)`;
@@ -98,7 +105,11 @@ champagneL: "images/stamps/champagne-l.png",
 ringL: "images/stamps/ring-l.png",
 kagi: "images/stamps/kagi.png",
 DM: "images/stamps/dm.png",
-hat: "images/stamps/hat.png"
+hat: "images/stamps/hat.png",
+bottleL: "images/stamps/bottle-l.png",
+bottleR: "images/stamps/bottle-r.png",
+HBtYL: "images/stamps/HBtY-l.png",
+HBtYR: "images/stamps/HBtY-r.png",
 };
 
 
@@ -118,7 +129,17 @@ messageInput.addEventListener(
   updatePreview
 );
 
-fontSelect.addEventListener(
+//fontSelect.addEventListener(
+//  "change",
+//  updatePreview
+//);
+
+messageFontSelect.addEventListener(
+  "change",
+  updatePreview
+);
+
+nameFontSelect.addEventListener(
   "change",
   updatePreview
 );

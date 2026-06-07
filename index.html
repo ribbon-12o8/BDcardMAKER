@@ -6,6 +6,10 @@
   <title>Birthday Card Maker</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic&family=Kaisei+Decol&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -25,12 +29,21 @@
       <option value="5">紫</option>
     </select>
 
-    <label>フォント</label>
-    <select id="font">
+    <label>メッセージフォント</label>
+    <select id="message-font">
       <option value="sans-serif">ゴシック</option>
-      <option value="serif">明朝</option>
-      <option value="'Comic Sans MS', cursive">手書き風</option>
-      <option value="'Arial Rounded MT Bold', sans-serif">丸ゴシック</option>
+      <option value="'Zen Maru Gothic', sans-serif">丸ゴシック</option>
+      <option value="'Mochiy Pop One', sans-serif">ポップ</option>
+      <option value="'Kaisei Decol', serif">デザイン明朝</option>
+
+    </select>
+
+    <label>お名前フォント</label>
+    <select id="name-font">
+      <option value="sans-serif">ゴシック</option>
+      <option value="'Zen Maru Gothic', sans-serif">丸ゴシック</option>
+      <option value="'Mochiy Pop One', sans-serif">ポップ</option>
+      <option value="'Kaisei Decol', serif">デザイン明朝</option>
     </select>
 
     <label>メッセージ</label>
@@ -38,35 +51,49 @@
 
     <div id="char-count">0 / 400文字</div>
 
+    <label>デコレーション</label>
+    <p>左上</p>
 <select id="stamp-tl">
     <option value="none">なし</option>
+    <option value="rose">ばら</option>
+    <option value="bottleL">シャンパンボトル</option>
+    <option value="beerL">ビール</option>
+    <option value="HBtYL">Happy Birthday to you</option>
 </select>
 
+    <p>右上</p>
 <select id="stamp-tr">
-  <option value="none">なし</option>
-  <option value="rose">ばら</option>
+    <option value="none">なし</option>
+    <option value="rose">ばら</option>
+    <option value="bottleR">シャンパンボトル</option>
+    <option value="beerR">ビール</option>
+    <option value="HBtYR">Happy Birthday to you</option>
 </select>
 
+    <p>左下</p> 
 <select id="stamp-bl">
-  <option value="none">なし</option>
-  <option value="beerL">ビール</option>
-  <option value="HL">H</option>
-  <option value="KL">K</option>
-  <option value="champagneL">シャンパン</option>
-  <option value="ringL">リング</option>
-  <option value="kagi">鍵</option>
-  <option value="DM">ドリンクミー</option>
+    <option value="none">なし</option>
+    <option value="rose">ばら</option>
+    <option value="beerL">ビール</option>
+    <option value="HL">H</option>
+    <option value="KL">K</option>
+    <option value="champagneL">シャンパンタワー</option>
+    <option value="ringL">リング</option>
+    <option value="kagi">鍵</option>
+    <option value="DM">ドリンクミー</option>
 </select>
 
+    <p>右下</p>
 <select id="stamp-br">
-  <option value="none">なし</option>
-  <option value="beerR">ビール</option>
-  <option value="HR">H</option>
-  <option value="KR">K</option>
-  <option value="champagneR">シャンパン</option>
-  <option value="ringR">リング</option>
-  <option value="kagi">鍵</option>
-  <option value="DM">ドリンクミー</option>
+    <option value="none">なし</option>
+    <option value="rose">ばら</option>
+    <option value="beerR">ビール</option>
+    <option value="HR">H</option>
+    <option value="KR">K</option>
+    <option value="champagneR">シャンパンタワー</option>
+    <option value="ringR">リング</option>
+    <option value="kagi">鍵</option>
+    <option value="DM">ドリンクミー</option>
 </select>
 
     <h2>プレビュー</h2>
