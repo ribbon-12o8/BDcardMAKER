@@ -167,6 +167,8 @@ const submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click", async () => {
 
   try {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "送信中...";
 
     const canvas = await html2canvas(
       document.getElementById("card-preview")
@@ -187,15 +189,20 @@ submitBtn.addEventListener("click", async () => {
     const result = await response.json();
 
     if(result.success){
-      alert("送信完了！");
+      alert("送信完了！ありがとうございます！");
+      submitBtn.textContent = "送信完了";
     }else{
       alert("エラー：" + result.error);
+      submitBtn.disabled = false;
+      submitBtn.textContent = "送信";
     }
 
   } catch(err){
 
     console.error(err);
     alert("送信失敗");
+    submitBtn.disabled = false;
+    submitBtn.textContent = "送信";
   }
 
 });
