@@ -3,6 +3,9 @@ const messageInput = document.getElementById("message");
 const messageFontSelect = document.getElementById("message-font");
 const nameFontSelect = document.getElementById("name-font");
 
+const textColorSelect =
+  document.getElementById("text-color");
+
 const designSelect =
   document.getElementById("design");
   
@@ -31,6 +34,12 @@ function updatePreview(){
 
     previewMessage.style.fontFamily =
   messageFontSelect.value;
+
+  previewMessage.style.color =
+  textColorSelect.value;
+
+previewName.style.color =
+  textColorSelect.value;
 
 previewName.style.fontFamily =
   nameFontSelect.value;
@@ -132,6 +141,11 @@ designSelect.addEventListener(
 
 messageInput.addEventListener(
   "input",
+  updatePreview
+);
+
+textColorSelect.addEventListener(
+  "change",
   updatePreview
 );
 
