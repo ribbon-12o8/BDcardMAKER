@@ -110,6 +110,8 @@ bottleL: "images/stamps/bottle-l.png",
 bottleR: "images/stamps/bottle-r.png",
 HBtYL: "images/stamps/HBtY-l.png",
 HBtYR: "images/stamps/HBtY-r.png",
+crackerL: "images/stamps/cracker-l.png",
+crackerR: "images/stamps/cracker-r.png"
 };
 
 
