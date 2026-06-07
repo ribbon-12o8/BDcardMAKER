@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Card Maker</title>
+  <title>Ryoday Birthday Card Maker</title>
 
   <link rel="stylesheet" href="style.css">
 
@@ -15,12 +15,18 @@
 
   <div class="container">
 
-    <h1>Birthday Card Maker</h1>
+    <h1>Ryoday Birthday Card Maker</h1>
+    <h3>もうすぐお誕生日を迎えるりょうだいさんへのバースデーメッセージカードを集めています！</h3>
+    <h3>送信していただいたカードは最終的に印刷＆スクラップブックにしてりょうだいさんにお渡しする予定です。ご協力いただけたらとってもとっても嬉しいです♥</h3>
+    <h3>期間はちょっと短いですが6月12日まででお願いします。</h3>
+    <h6>企画・本サイト＆デザイン作成：りぼん（instagram: @ribbon_12o8）</h6>
+    
 
-    <label>お名前</label>
+
+    <label>お名前（なしがいい場合はスペースを入れてください）</label>
     <input type="text" id="name">
 
-    <label>カードデザイン</label>
+    <label>カードデザインを選ぶ</label>
     <select id="design">
       <option value="1">黒赤</option>
       <option value="2">青1</option>
@@ -29,7 +35,7 @@
       <option value="5">紫</option>
     </select>
 
-    <label>メッセージフォント</label>
+    <label>メッセージのフォントを選ぶ</label>
     <select id="message-font">
       <option value="sans-serif">ゴシック</option>
       <option value="'Zen Maru Gothic', sans-serif">丸ゴシック</option>
@@ -38,7 +44,7 @@
 
     </select>
 
-    <label>お名前フォント</label>
+    <label>名前のフォントを選ぶ</label>
     <select id="name-font">
       <option value="sans-serif">ゴシック</option>
       <option value="'Zen Maru Gothic', sans-serif">丸ゴシック</option>
@@ -46,13 +52,13 @@
       <option value="'Kaisei Decol', serif">デザイン明朝</option>
     </select>
 
-    <label>メッセージ</label>
+    <label>メッセージを入力する</label>
     <textarea id="message" maxlength="400"></textarea>
 
     <div id="char-count">0 / 400文字</div>
 
-    <label>デコレーション</label>
-    <p>左上</p>
+    <p>デコレーションを選ぶ</p>
+    <label>左上</label>
 <select id="stamp-tl">
     <option value="none">なし</option>
     <option value="rose">ばら</option>
@@ -62,7 +68,7 @@
     <option value="crackerL">クラッカー</option>
 </select>
 
-    <p>右上</p>
+    <label>右上</label>
 <select id="stamp-tr">
     <option value="none">なし</option>
     <option value="rose">ばら</option>
@@ -72,7 +78,7 @@
     <option value="crackerR">クラッカー</option>
 </select>
 
-    <p>左下</p> 
+    <label>左下</label> 
 <select id="stamp-bl">
     <option value="none">なし</option>
     <option value="rose">ばら</option>
@@ -85,7 +91,7 @@
     <option value="DM">ドリンクミー</option>
 </select>
 
-    <p>右下</p>
+    <label>右下</label>
 <select id="stamp-br">
     <option value="none">なし</option>
     <option value="rose">ばら</option>
