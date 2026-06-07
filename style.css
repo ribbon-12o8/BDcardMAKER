@@ -37,6 +37,10 @@ textarea{
 
   position:relative;
 }
+#card-preview{
+  transform:scale(0.5);
+  transform-origin:top center;
+}
 
 #preview-message{
   white-space: pre-wrap;
