@@ -188,9 +188,21 @@ submitBtn.addEventListener("click", async () => {
     submitBtn.disabled = true;
     submitBtn.textContent = "送信中...";
 
-    const canvas = await html2canvas(
-      document.getElementById("card-preview")
-    );
+    const card =
+  document.getElementById("card-preview");
+
+const oldTransform =
+  card.style.transform;
+
+card.style.transform = "none";
+
+const canvas =
+  await html2canvas(card,{
+    scale:2
+  });
+
+card.style.transform =
+  oldTransform;
 
     const image = canvas.toDataURL("image/png");
 
